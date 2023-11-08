@@ -32,17 +32,18 @@ const [nombre, setNombre] = useState("Victor");
                          {nombre.length >= 4 ? 'verde' : 'rojo'}>{nombre}</strong> </p>
             <p> Mi web es: {web} </p>
 
-            <input type = "text" onChange={e => cambiarNombre(e.target.value)} 
+            <input type = "text" onChange={ e => cambiarNombre(e.target.value)} 
                    placeholder=" Cambia el nombre "/>
 
                 <button onClick={e => {
                     console.log (" El valor guardadoen tu estado :", nombre);
                 }}   
 
-            <button on Click = {e => cambiarNombre("VICTOR ROBLES WEB")}></button>
+               < button on Click = { e => cambiarNombre("VICTOR ROBLES WEB")}> </button>
+              
 
-            <h2> Cursos: </h2>
-            <ul>
+                <h2> Cursos: </h2>
+                <ul>
                 {
                     cursos.map( (curso, indice) => {
                         return(<li key={indice}>
